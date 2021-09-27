@@ -2,11 +2,11 @@
 
 [![GitMoji](https://img.shields.io/badge/Gitmoji-%F0%9F%8E%A8%20-FFDD67.svg)](https://gitmoji.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/deno-is-numeric?color=blue&label=Total%20Lines)
+![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/deno-is-number?color=blue&label=Total%20Lines)
 ![CodeQL](https://github.com/UltiRequiem/deno-is-numeric/workflows/CodeQL/badge.svg)
 
-You can get this package by [nest.land](https://nest.land/package/is_numeric) or
-[deno.land](https://deno.land/x/is_numeric).
+You can get this package by [nest.land](https://nest.land/package/is_number) or
+[deno.land](https://deno.land/x/is_number).
 
 ## Usage
 
@@ -18,7 +18,7 @@ and
 ```typescript
 import isNumeric, {
   isNumericSync,
-} from "https://deno.land/x/is_numeric/mod.ts";
+} from "https://deno.land/x/is_number/mod.ts";
 
 console.log(await isNumeric("hello")); // false
 
@@ -37,5 +37,5 @@ console.log(isNumericSync("678")); // true
 
 ### License
 
-[This project](https://deno.land/x/is_numeric) is licensed under the
+[This project](https://deno.land/x/is_number) is licensed under the
 [MIT License](./LICENSE.md).
