@@ -3,7 +3,5 @@ export default function isNumeric(stringToCheck: string) {
 }
 
 export function isNumericSync(value: string): boolean {
-  return ((value != null) &&
-    (value !== "") &&
-    !isNaN(Number(value.toString())));
+  return (value !== "") && !isNaN(Number(value));
 }
