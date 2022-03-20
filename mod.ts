@@ -8,6 +8,7 @@
  * isNumber("hello")); //=> false
  * isNumber("hello8")); //=> false
  * isNumber("678")); //=> true
+ * isNumber(345)); //=> true
  * ```
  */
 export function isNumber(number: unknown) {
