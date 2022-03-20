@@ -9,7 +9,7 @@
  * isNumeric("hello8")); //=> false
  * isNumeric("678")); //=> true
  * ```
- * */
+ */
 export function isNumeric(value: string) {
   return value !== "" && !Number.isNaN(Number(value));
 }

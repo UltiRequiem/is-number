@@ -43,7 +43,8 @@ await build({
     homepage: packageConfig.homepage,
 
     bugs: {
-      url: `https://github.com/${publisher.username}/${packageConfig.repoName}/issues`,
+      url:
+        `https://github.com/${publisher.username}/${packageConfig.repoName}/issues`,
       email: publisher.email,
     },
 
