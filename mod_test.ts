@@ -1,18 +1,10 @@
-import { assertEquals } from "./test_deps.ts";
-import isNumeric, { isNumericSync } from "./mod.ts";
+import { assertEquals } from "https://deno.land/std@0.108.0/testing/asserts.ts";
+import { isNumeric } from "./mod.ts";
 
-Deno.test("Test isNumeric 1", async () => {
-  assertEquals(await isNumeric("hello"), false);
+Deno.test("Text with letter is not numeric.", () => {
+  assertEquals(isNumeric("hello"), false);
 });
 
-Deno.test("Test isNumeric 2", async () => {
-  assertEquals(await isNumeric("12"), true);
-});
-
-Deno.test("Test isNumericSync 1", () => {
-  assertEquals(isNumericSync("12jej"), false);
-});
-
-Deno.test("Test isNumericSync 2", () => {
-  assertEquals(isNumericSync("12345"), true);
+Deno.test("Text with only numbers is numeric.", () => {
+  assertEquals(isNumeric("12"), true);
 });
