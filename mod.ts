@@ -2,7 +2,7 @@
  * Check if a string is a valid number.
  *
  * @example
- * ```typescript
+ * ```javascript
  * import { isNumeric } from "https://deno.land/x/is_number/mod.ts";
  *
  * isNumber("hello")); //=> false
