@@ -20,7 +20,7 @@ isNumeric("hello")); //=> false
 isNumeric("678")); //=> true
 ```
 
-### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is_number)
+### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
 
 ```typescript
 import { is_number } from "@ultirequiem/is-number";

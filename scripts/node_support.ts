@@ -10,7 +10,7 @@ const publisher = {
 const packageConfig = {
   name: "@ultirequiem/is-number",
   repoName: "is-number",
-  version: "1.3.0",
+  version: "1.3.1",
   description: "Check if a string is a valid number.",
   keywords: ["math", "string"],
   license: "MIT",
