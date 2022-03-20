@@ -1,6 +1,6 @@
 # is-number
 
-[![CI](https://github.com/UltiRequiem/is_number/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/is_number/actions/workflows/ci.yaml)
+[![CI](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml)
 [![Code Coverage](https://codecov.io/gh/ultirequiem/is_number/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/is_number)
 [![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
 
