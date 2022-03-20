@@ -6,13 +6,24 @@
 
 [![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fis_number%2Fmod.ts)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
 
-Check if an string is Numeric.
+In JavaScript, it's not always as straightforward as it should be to reliably
+check if a value is a number. It's common for devs to use `+`, `-`, or `Number()` to
+cast a string value to a number (for example, when values are returned from user
+input, regex matches, parsers, etc). But there are many non-intuitive edge cases
+that yield unexpected results:
+
+```javascript
+console.log(+[]); //=> 0
+console.log(+""); //=> 0
+console.log(+"   "); //=> 0
+console.log(typeof NaN); //=> 'number'
+```
 
 ## Usage
 
 ### [Deno 🦕](https://deno.land/x/is_number)
 
-```typescript
+```javascript
 import { isNumber } from "https://deno.land/x/is_number/mod.ts";
 
 isNumber("hello")); //=> false
@@ -24,7 +35,7 @@ isNumber(345)); //=> true
 
 ### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
 
-```typescript
+```javascript
 import { isNumber } from "@ultirequiem/is-number";
 ```
 
@@ -53,7 +64,7 @@ You have the same API on all of this platforms.
 
 ### True Cases
 
-```typescript
+```javascript
 isNumber(5e3);
 isNumber(0xff);
 isNumber(-1.1);
@@ -81,7 +92,7 @@ isNumber(parseFloat("012"));
 
 Everything else is false.
 
-```typescript
+```javascript
 isNumber(Infinity);
 isNumber(NaN);
 isNumber(null);
