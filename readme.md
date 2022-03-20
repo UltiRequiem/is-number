@@ -7,10 +7,10 @@
 [![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fis_number%2Fmod.ts)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
 
 In JavaScript, it's not always as straightforward as it should be to reliably
-check if a value is a number. It's common for devs to use `+`, `-`, or `Number()` to
-cast a string value to a number (for example, when values are returned from user
-input, regex matches, parsers, etc). But there are many non-intuitive edge cases
-that yield unexpected results:
+check if a value is a number. It's common for devs to use `+`, `-`, or
+`Number()` to cast a string value to a number (for example, when values are
+returned from user input, regex matches, parsers, etc). But there are many
+non-intuitive edge cases that yield unexpected results:
 
 ```javascript
 console.log(+[]); //=> 0
@@ -26,11 +26,11 @@ console.log(typeof NaN); //=> 'number'
 ```javascript
 import { isNumber } from "https://deno.land/x/is_number/mod.ts";
 
-isNumber("hello")); //=> false
-isNumber("678")); //=> true
-isNumber({}) //=> false
-isNumber(+{a:"34"}) //=> false
-isNumber(345)); //=> true
+isNumber("hello"); //=> false
+isNumber("678"); //=> true
+isNumber({}); //=> false
+isNumber(+{ a: "34" }); //=> false
+isNumber(345); //=> true
 ```
 
 ### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
