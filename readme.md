@@ -13,7 +13,7 @@ Check if an string is Numeric.
 ### [Deno 🦕](https://deno.land/x/is_number)
 
 ```typescript
-import { isNumeric } from "https://deno.land/x/is_number/mod.ts";
+import { isNumber } from "https://deno.land/x/is_number/mod.ts";
 
 isNumeric("hello")); //=> false
 
@@ -23,7 +23,7 @@ isNumeric("678")); //=> true
 ### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
 
 ```typescript
-import { is_number } from "@ultirequiem/is-number";
+import { isNumber } from "@ultirequiem/is-number";
 ```
 
 ### Browser

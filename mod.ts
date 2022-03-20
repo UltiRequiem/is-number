@@ -5,11 +5,18 @@
  * ```typescript
  * import { isNumeric } from "https://deno.land/x/is_number/mod.ts";
  *
- * isNumeric("hello")); //=> false
- * isNumeric("hello8")); //=> false
- * isNumeric("678")); //=> true
+ * isNumber("hello")); //=> false
+ * isNumber("hello8")); //=> false
+ * isNumber("678")); //=> true
  * ```
  */
-export function isNumeric(value: string) {
-  return value !== "" && !Number.isNaN(Number(value));
+export function isNumber(number: unknown) {
+  switch (typeof number) {
+    case "number":
+      return number - number === 0;
+    case "string":
+      return number.trim() !== "" && !Number.isNaN(Number(number));
+  }
+
+  return false;
 }
