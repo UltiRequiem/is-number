@@ -15,9 +15,15 @@ Check if an string is Numeric.
 ```typescript
 import { isNumber } from "https://deno.land/x/is_number/mod.ts";
 
-isNumeric("hello")); //=> false
+isNumber("hello")); //=> false
 
-isNumeric("678")); //=> true
+isNumber("678")); //=> true
+
+isNumber({}) //=> false
+
+isNumber(+{a:"34"}) //=> false
+
+isNumber(345)); //=> true
 ```
 
 ### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
