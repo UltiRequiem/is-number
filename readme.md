@@ -24,19 +24,23 @@ console.log(typeof NaN); //=> 'number'
 ### [Deno 🦕](https://deno.land/x/is_number)
 
 ```javascript
-import { isNumber } from "https://deno.land/x/is_number/mod.ts";
+import { assertIsNumber, isNumber } from "https://deno.land/x/is_number/mod.ts";
 
 isNumber("hello"); //=> false
 isNumber("678"); //=> true
 isNumber({}); //=> false
 isNumber(+{ a: "34" }); //=> false
 isNumber(345); //=> true
+
+assertIsNumber([123]); //=> throws
+assertIsNumber({}); //=> throws
+assertIsNumber(34); //=> doesn't throws
 ```
 
 ### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
 
 ```javascript
-import { isNumber } from "@ultirequiem/is-number";
+import { assertIsNumber, isNumber } from "@ultirequiem/is-number";
 ```
 
 ### Browser
