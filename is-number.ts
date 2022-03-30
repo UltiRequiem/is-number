@@ -10,7 +10,7 @@ const { args, options } = await new Command()
   .description("Check if something is a number.")
   .parse(Deno.args);
 
-for (const possibleNumber of args[1]) {
+for (const possibleNumber of args[0]) {
   const isANumber = isNumber(possibleNumber);
 
   const message = options.verbose

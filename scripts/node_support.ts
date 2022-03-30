@@ -1,4 +1,4 @@
-import { buildPackage } from "https://deno.land/x/ultirequiem@0.0.11/node_support.ts";
+import { buildPackage } from "https://deno.land/x/ultirequiem@0.0.12/node_support.ts";
 
 buildPackage(
   {
@@ -13,5 +13,7 @@ buildPackage(
       "./mod.ts",
       { name: "is-number", path: "./is-number.ts", kind: "bin" },
     ],
-  },
+    supportCJS: false,
+    check: false,
+  }
 );
