@@ -15,5 +15,5 @@ buildPackage(
     ],
     supportCJS: false,
     check: false,
-  }
+  },
 );
