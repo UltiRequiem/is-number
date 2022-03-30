@@ -1,56 +1,17 @@
-import { build } from "https://deno.land/x/dnt@0.22.0/mod.ts";
+import { buildPackage } from "https://deno.land/x/ultirequiem@0.0.11/node_support.ts";
 
-const publisher = {
-  name: "Eliaz Bobadilla",
-  username: "ultirequiem",
-  email: "eliaz.bobadilladev@gmail.com",
-  site: "https://ultirequiem.com",
-} as const;
-
-const packageConfig = {
-  name: "@ultirequiem/is-number",
-  repoName: "is-number",
-  version: "1.4.0",
-  description: "Check if a string is a valid number.",
-  keywords: ["math", "string"],
-  license: "MIT",
-  homepage: "https://is-number.js.org",
-} as const;
-
-await build({
-  entryPoints: ["./mod.ts"],
-
-  outDir: "./node",
-
-  shims: {
-    deno: true,
+buildPackage(
+  {
+    repoName: "@ultirequiem/is-number",
+    description: "Check if something is a valid number.",
+    homepage: "https://is-number.js.org",
+    keywords: ["number", "math"],
+    version: "1.5.0",
   },
-
-  package: {
-    name: packageConfig.name,
-    description: packageConfig.description,
-
-    version: packageConfig.version,
-
-    license: packageConfig.license,
-
-    funding: {
-      type: "patreon",
-      url: `https://www.patreon.com/${publisher.username}`,
-    },
-
-    repository: `github:${publisher.username}/${packageConfig.repoName}`,
-    homepage: packageConfig.homepage,
-
-    bugs: {
-      url:
-        `https://github.com/${publisher.username}/${packageConfig.repoName}/issues`,
-      email: publisher.email,
-    },
-
-    keywords: packageConfig.keywords,
-  },
-});
-
-Deno.copyFileSync("license", "node/LICENSE");
-Deno.copyFileSync("readme.md", "node/README.md");
+  {
+    entryPoints: [
+      "./mod.ts",
+      { name: "is-number", path: "./is-number.ts", kind: "bin" },
+    ],
+  }
+);
