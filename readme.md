@@ -41,22 +41,14 @@ import { isNumber } from "@ultirequiem/is-number";
 
 ### Browser
 
-Using
-[type module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
-🍱
+You can use any [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) 🔥
 
-- [esm.sh](https://esm.sh/@ultirequiem/is-number)
+Eg. [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+▶ [SkyPack](https://cdn.skypack.dev/@ultirequiem/is-number) _/_
+[script tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) ▶
+[JSDelivr](https://cdn.jsdelivr.net/npm/@ultirequiem/is-number).
 
-- [skypack](https://cdn.skypack.dev/@ultirequiem/is-number)
-
-Using a plain
-[script tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) 👇
-
-- [jsdelivr](https://cdn.jsdelivr.net/npm/@ultirequiem/is-number)
-
-- [unpkg](https://unpkg.com/@ultirequiem/is-number)
-
-You have the same API on all of this platforms.
+_The API is the same on all this platforms._
 
 ## Documentation
 
@@ -108,6 +100,42 @@ isNumber({});
 
 See the [tests](./mod_test.ts) for more examples.
 
+## CLI Tool
+
+Was done mainly as usage example.
+
+### Install
+
+- Node.js 🦍
+
+```sh
+npm install -g @ultirequiem/is-number
+```
+
+- Deno 🦕
+
+```sh
+deno install https://deno.land/x/is_number/is-number.ts
+```
+
+### Usage
+
+```sh
+is-number 1 2 hey
+true
+true
+false
+```
+
+Or with the verbose flag 👇
+
+```sh
+is-number 1 2 hey --verbose
+"1" is a number? true
+"2" is a number? true
+"hey" is a number? false
+```
+
 ## Support
 
 Open an Issue, I will check it a soon as possible 👀
@@ -119,6 +147,20 @@ Consider [supporting me on Patreon](https://patreon.com/UltiRequiem) if you like
 my work 🚀
 
 Don't forget to start the repo ⭐
+
+## Versioning
+
+We use [SemVer](http://semver.org) for versioning. For the versions available,
+see the [tags](https://github.com/UltiRequiem/is-number/tags).
+
+## Authors
+
+[Eliaz Bobadilla (a.k.a UltiRequiem)](https://ultirequiem.com) - Creator and
+Maintainer 💪
+
+See also the full list of
+[contributors](https://github.com/UltiRequiem/is-number/contributors) who participated
+in this project.
 
 ## Licence
 
