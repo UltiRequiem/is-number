@@ -1,5 +1,5 @@
 /**
- * Check if a string is a valid number.
+ * Check if a value is a valid number.
  *
  * @example
  * ```javascript
@@ -43,13 +43,34 @@
  * isNumber({}); //=> false
  * ```
  */
-export function isNumber(number: unknown) {
-  switch (typeof number) {
+export function isNumber(input: unknown): input is number {
+  switch (typeof input) {
     case "number":
-      return number - number === 0;
+      return input - input === 0;
     case "string":
-      return number.trim() !== "" && !Number.isNaN(Number(number));
+      return input.trim() !== "" && !Number.isNaN(Number(input));
   }
 
   return false;
+}
+
+/**
+ * Asserts a value is a number.
+ * Throws an error if the value is not a number.
+ *
+ * @example
+ * ```javascript
+ * import { assertIsNumber } from "https://deno.land/x/is_number/mod.ts";
+ *
+ * assertIsNumber([1]); //=> throws
+ * assertIsNumber([]); //=> throws
+ * assertIsNumber(function () {}); //=> throws
+ * assertIsNumber({}); //=> throws
+ * assertIsNumber(1); //=> does not throw
+ * ```
+ */
+export function assertIsNumber(value: unknown): asserts value is number {
+  if (!isNumber(value)) {
+    throw new TypeError(`Expected value to be a number, got ${typeof value}`);
+  }
 }
