@@ -3,7 +3,7 @@ import {
   assertEquals,
   assertThrows,
 } from "https://deno.land/std@0.132.0/testing/asserts.ts";
-import { isNumber, assertIsNumber } from "./mod.ts";
+import { assertIsNumber, isNumber } from "./mod.ts";
 
 Deno.test("Text with letter is not numeric.", () => {
   assertEquals(isNumber("hello"), false);
