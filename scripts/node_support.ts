@@ -6,7 +6,7 @@ buildPackage(
     description: "Check if something is a valid number.",
     homepage: "https://is-number.js.org",
     keywords: ["number", "math"],
-    version: "1.6.0",
+    version: "1.6.1",
   },
   {
     entryPoints: [
