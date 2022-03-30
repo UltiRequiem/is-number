@@ -13,5 +13,5 @@ buildPackage(
       "./mod.ts",
       { name: "is-number", path: "./is-number.ts", kind: "bin" },
     ],
-  }
+  },
 );

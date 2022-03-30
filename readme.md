@@ -159,8 +159,8 @@ see the [tags](https://github.com/UltiRequiem/is-number/tags).
 Maintainer 💪
 
 See also the full list of
-[contributors](https://github.com/UltiRequiem/is-number/contributors) who participated
-in this project.
+[contributors](https://github.com/UltiRequiem/is-number/contributors) who
+participated in this project.
 
 ## Licence
 
