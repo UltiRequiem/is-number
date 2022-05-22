@@ -1,10 +1,7 @@
 # is-number
 
-[![CI](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml)
 [![Code Coverage](https://codecov.io/gh/ultirequiem/is-number/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/is-number)
 [![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
-
-[![Custom badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Fis_number%2Fmod.ts)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
 
 In JavaScript, it's not always as straightforward as it should be to reliably
 check if a value is a number. It's common for devs to use `+`, `-`, or
