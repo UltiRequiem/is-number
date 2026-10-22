@@ -1,11 +1,12 @@
 # is-number
 
+In JavaScript, it's not always as straightforward as it should be to reliably
+
 [![npm](https://img.shields.io/npm/v/@ultirequiem/is-number?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/is-number)
 [![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/is-number?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/is-number)
 [![CI](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/is-number/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/UltiRequiem/is-number/graph/badge.svg)](https://codecov.io/gh/UltiRequiem/is-number)
 
-In JavaScript, it's not always as straightforward as it should be to reliably
 check if a value is a number. It's common for devs to use `+`, `-`, or
 `Number()` to cast a string value to a number (for example, when values are
 returned from user input, regex matches, parsers, etc). But there are many
