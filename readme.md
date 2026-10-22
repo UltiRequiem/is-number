@@ -1,7 +1,6 @@
 # is-number
 
 [![Code Coverage](https://codecov.io/gh/ultirequiem/is-number/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/is-number)
-[![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/is_number/mod.ts)
 
 In JavaScript, it's not always as straightforward as it should be to reliably
 check if a value is a number. It's common for devs to use `+`, `-`, or
@@ -18,10 +17,10 @@ console.log(typeof NaN); //=> 'number'
 
 ## Usage
 
-### [Deno 🦕](https://deno.land/x/is_number)
+### [Node.js 🐢🚀](https://npmjs.com/package/is-number)
 
 ```javascript
-import { assertIsNumber, isNumber } from "https://deno.land/x/is_number/mod.ts";
+import { assertIsNumber, isNumber } from "is-number";
 
 isNumber("hello"); //=> false
 isNumber("678"); //=> true
@@ -32,12 +31,6 @@ isNumber(345); //=> true
 assertIsNumber([123]); //=> throws
 assertIsNumber({}); //=> throws
 assertIsNumber(34); //=> doesn't throws
-```
-
-### [Node.js 🐢](https://npmjs.com/package/@ultirequiem/is-number)
-
-```javascript
-import { assertIsNumber, isNumber } from "@ultirequiem/is-number";
 ```
 
 ### Browser
@@ -157,9 +150,6 @@ Open an Issue, I will check it a soon as possible 👀
 
 If you want to hurry me up a bit
 [send me a tweet](https://twitter.com/intent/tweet?text=%40UltiRequiem%20) 😆
-
-Consider [supporting me on Patreon](https://patreon.com/UltiRequiem) if you like
-my work 🚀
 
 Don't forget to star the repo ⭐
 
