@@ -20,7 +20,7 @@ console.log(typeof NaN); //=> 'number'
 
 ## Usage
 
-ESM only: the same import works in Node.js, Bun and browsers.
+ESM only, types included: the same import works in Node.js, Bun and browsers.
 
 ```javascript
 import { assertIsNumber, isNumber } from "@ultirequiem/is-number";
