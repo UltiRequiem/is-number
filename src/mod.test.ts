@@ -1,21 +1,17 @@
-import {
-  assert,
-  assertEquals,
-  assertThrows,
-} from "https://deno.land/std@0.224.0/testing/asserts.ts";
-import { assertIsNumber, isNumber } from "./mod.ts";
+import { expect, it } from "vitest";
+import { assertIsNumber, isNumber } from "./index.js";
 
-Deno.test("Text with letter is not numeric.", () => {
-  assertEquals(isNumber("hello"), false);
-  assert(isNumber("hello") === false);
-  assert(!isNumber("hello"));
+it("Text with letter is not numeric.", () => {
+  expect(isNumber("hello")).toEqual(false);
+  expect(isNumber("hello") === false).toBeTruthy();
+  expect(!isNumber("hello")).toBeTruthy();
 });
 
-Deno.test("Text with only numbers is numeric.", () => {
-  assert(isNumber("12"));
+it("Text with only numbers is numeric.", () => {
+  expect(isNumber("12")).toBeTruthy();
 });
 
-Deno.test("Not Valid Numbers.", () => {
+it("Not Valid Numbers.", () => {
   const fixtures = [
     "   ",
     "\r\n\t",
@@ -56,11 +52,11 @@ Deno.test("Not Valid Numbers.", () => {
   ];
 
   fixtures.forEach((fixture) => {
-    assertEquals(isNumber(fixture), false);
+    expect(isNumber(fixture)).toEqual(false);
   });
 });
 
-Deno.test("Valid Numbers.", () => {
+it("Valid Numbers.", () => {
   const fixtures = [
     0xff,
     5e3,
@@ -147,11 +143,11 @@ Deno.test("Valid Numbers.", () => {
   ];
 
   for (const fixture of fixtures) {
-    assert(isNumber(fixture));
+    expect(isNumber(fixture)).toBeTruthy();
   }
 });
 
-Deno.test("Assert Not Valid Numbers.", () => {
+it("Assert Not Valid Numbers.", () => {
   const fixtures = [
     "   ",
     "\r\n\t",
@@ -192,11 +188,11 @@ Deno.test("Assert Not Valid Numbers.", () => {
   ];
 
   fixtures.forEach((fixture) => {
-    assertThrows(() => assertIsNumber(fixture));
+    expect(() => assertIsNumber(fixture)).toThrow();
   });
 });
 
-Deno.test("Asserts Valid Numbers.", () => {
+it("Asserts Valid Numbers.", () => {
   const fixtures = [
     0xff,
     5e3,
