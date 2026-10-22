@@ -1,7 +1,7 @@
 {
   "name": "@ultirequiem/is-number",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Check whether a value is a number or a numeric string.",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,7 +17,13 @@
   "engines": {
     "node": ">=20"
   },
-  "keywords": [],
+  "keywords": [
+    "number",
+    "numeric",
+    "type-check",
+    "esm",
+    "typescript"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
