@@ -3,7 +3,7 @@
  *
  * @example
  * ```javascript
- * import { isNumeric } from "https://deno.land/x/is_number/mod.ts";
+ * import { isNumeric } from "@ultirequiem/is-number";
  *
  * isNumber("hello")); //=> false
  * isNumber("hello8")); //=> false
@@ -60,7 +60,7 @@ export function isNumber(input: unknown): input is number {
  *
  * @example
  * ```javascript
- * import { assertIsNumber } from "https://deno.land/x/is_number/mod.ts";
+ * import { assertIsNumber } from "@ultirequiem/is-number";
  *
  * assertIsNumber([1]); //=> throws
  * assertIsNumber([]); //=> throws
